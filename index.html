@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/c4d739b12e.js" crossorigin="anonymous"></script>
+  <script src="./script.js" async></script>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./myntra.png" alt="" width="90" height="50">
+        </a>
+
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">MEN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">WOMEN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">KIDS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">HOME&LIVING</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Search" aria-describedby="button-addon2">
+              <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
+                  class="fas fa-search"></i></button>
+            </div>
+          </form>
+          <ul class="navbar-nav ml-auto mb-3 mb-lg-3">
+            <li>
+              <a class="nav-link" href="#"><i class="fas fa-user">Profile</i></a>
+            </li>
+            <li>
+              <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                onclick="displayItem()"><i class="fas fa-shopping-cart">Cart</i></a>
+            </li>
+            <li>
+              <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2">LogOut</a>
+            </li>
+          </ul>
+
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="wrapper" id="sidebar">
+
+      <b>FILTERS</b>
+      <hr>
+      <ul style="list-style: none;">
+        <b>BRAND</b>
+        <form action="/action_page.php">
+          <input type="checkbox" id="th">
+          <label for="th"> Tommy Hilfiger</label><br>
+          <input type="checkbox" id="st">
+          <label for="st"> Stalk</label><br>
+          <input type="checkbox" id="mt">
+          <label for="mt"> Metro</label><br>
+          <input type="checkbox" id="cs">
+          <label for="cs"> CORSICA</label><br>
+        </form>
+        <hr>
+        <b>PRICE</b>
+        <form action="/action_page.php">
+          <input type="checkbox" id="th">
+          <label for="th"> Below 500</label><br>
+          <input type="checkbox" id="st">
+          <label for="st"> 500-1000</label><br>
+          <input type="checkbox" id="mt">
+          <label for="mt">1000-2000</label><br>
+          <input type="checkbox" id="cs">
+          <label for="cs"> Above 2000</label><br>
+        </form>
+      </ul>
+
+
+    </div>
+    <div class="card" id="content1" style="width: 17rem;">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./shoe1.jpeg" class="d-block w-100" id="image" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./shoe2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./shoe3.webp" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title" id="item">Shoetopia</h5>
+        <p class="card-text" id="price">Rs. 1599/-</p>
+        <a href="#" class="btn btn-outline-dark" id="addToCart">Add to cart</a>
+      </div>
+    </div>
+
+
+    <div class="card" id="content2" style="width: 17rem;">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./shoe2.jpg" class="d-block w-100" id="image" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./shoe1.jpeg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./shoe3.webp" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title" id="item">Adidas</h5>
+        <p class="card-text" id="price">Rs. 2599/-</p>
+        <a href="#" class="btn btn-outline-dark" id="addToCart">Add to cart</a>
+      </div>
+    </div>
+
+
+    <div class="card" id="content3" style="width: 17rem;">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./shoe1.jpeg" class="d-block w-100" id="image" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./shoe3.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./shoe2.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title" id="title">STALK</h5>
+        <p class="card-text" id="price">Rs. 1025/-</p>
+        <a href="#" class="btn btn-outline-dark" id="addToCart">Add to cart</a>
+      </div>
+    </div>
+
+
+    <div class="card" id="content4" style="width: 17rem;">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./shoe3.webp" class="d-block w-100" id="image" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./shoe2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./shoe1.jpeg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title" id="title">DressBerry</h5>
+        <p class="card-text" id="price">Rs. 1494/-</p>
+        <a href="#" class="btn btn-outline-dark" id="addToCart">Add to cart</a>
+      </div>
+    </div>
+
+
+    <div class="card" id="content5" style="width: 17rem;">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./shoe2.jpg" class="d-block w-100" id="image" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./shoe1.jpeg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./shoe3.webp" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title" id="title">ZAPATOZ</h5>
+        <p class="card-text" id="price">Rs. 649/-</p>
+        <a href="#" class="btn btn-outline-dark" id="addToCart">Add to cart</a>
+      </div>
+    </div>
+
+
+    <div class="card" id="content6" style="width: 17rem;">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./shoe3.webp" id="image" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./shoe1.jpeg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./shoe2.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title" id="title">CORSICA</h5>
+        <p class="card-text" id="price">Rs. 1345/-</p>
+        <a href="#" class="btn btn-outline-dark" id="addToCart">Add to cart</a>
+      </div>
+    </div>
+    <!-- Modal starts here-->
+    <div class="cart">
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cart Items</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="result">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Logout Option-->
+    <div class="cart">
+      <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+          <div class="modal-content">
+
+            <div class="modal-body">
+<h3 style="margin: 20px; font-style: italic; text-align: center;">Login to your account</h3>
+              <div class="container p-5">
+                <div class="border rounded-3 mx-auto bg-light text-dark " style="width: 300px;">
+                  <form>
+
+                    <div class="p-2">
+                      <label for="un">Username</label>
+                      <input type="text" class="form-control" id="un">
+                    </div>
+                    <div class="p-2">
+                      <label for="pw">Password</label>
+                      <a href="" style="font-size: 12px; text-align:right;" class="ms-5">forgot password?</a>
+                      <input type="password" class="form-control" id="pw">
+                    </div>
+                    <div class="p-2">
+                      <button class="w-100 btn btn-success mb-3">Login</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Exit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+
+</html>
