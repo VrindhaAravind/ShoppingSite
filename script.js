@@ -58,6 +58,7 @@ function displayItem() {
             <div class="card-body">
               <h5 class="card-title">${item.name}</h5>
               <p class="card-text">${item.price}</p>
+              <button onclick=removeItem(item)>Delete</button>
             </div>
           </div>`
     }
@@ -65,4 +66,15 @@ function displayItem() {
 
     document.querySelector("#result").innerHTML = html
 
+}
+function removeItem(item) {
+    
+    let cartItem=JSON.parse(localStorage.getItem('prodInCart'))
+    cartItem.forEach(item=>{
+        if (item.name != event.target.parentElement.children[0].textContent) {
+            products.push(item)
+    }
+    localStorage.setItem('prodInCart', JSON.stringify(products))
+    window.location.reload();
+});
 }
